@@ -1,4 +1,4 @@
-#Unhash this to test the fake shit
+# Unhash this to test the fake shit
 # table = {
 #     "id" : [100,200,300,400],
 #     "question1": [1, 3, 2, 2],
@@ -12,7 +12,7 @@
 
 
 #Unhash this to legit shit
-# table = db.execute("SELECT * from Questionnaire")
+# table = db.execute("SELECT * FROM questionnaire WHERE id= (SELECT MAX(Id) FROM questionnaire)")
 
 
 
@@ -30,24 +30,23 @@ for column in table:
 questions.pop(0)
 
 
+id_number = table["id"][0]
+for question in questions:
+    tally_count[table[question][0]] += 1
+planet_to_visit = 1
+if tally_count[2] > tally_count[1]:
+    if tally_count[2] > tally_count[3]:
+        planet_to_visit = 2
+elif tally_count[3] > tally_count[1]:
+    planet_to_visit = 3
 
+planet_to_visit
 
-for i in range(len(table["id"])):
-    id_number = table["id"][i]
-    for question in questions:
-        tally_count[table[question][i]] += 1
-    planet_to_visit = 1
-    if tally_count[2] > tally_count[1]:
-        if tally_count[2] > tally_count[3]:
-            planet_to_visit = 2
-    elif tally_count[3] > tally_count[1]:
-        planet_to_visit = 3
-    
-    print(f"for id number {id_number} the optimal planet is planet number {planet_to_visit}")
-    print(tally_count)
-    tally_count[1] = 0
-    tally_count[2] = 0
-    tally_count[3] = 0
+# print(f"for id number {id_number} the optimal planet is planet number {planet_to_visit}")
+# print(tally_count)
+# tally_count[1] = 0
+# tally_count[2] = 0
+# tally_count[3] = 0
 
 
 

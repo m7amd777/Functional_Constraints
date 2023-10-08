@@ -1,0 +1,64 @@
+{% extends "layout2.html" %}
+
+{% block body %}
+
+    <form action="/quiz" method="post">
+
+    <h5 id="question"> What type of experience are you seeking?</h5>
+    <select id="answer" name="one" class="form-select" aria-label="Default select example">
+        <option selected>Choose your answer.</option>
+        <option value="1">Closest to Earth's environment</option>
+        <option value="2">Unique landscapes and moons</option>
+        <option value="3">Gas giants exploration</option>
+      </select>
+
+      <h5 id="question"> What kind of climate do you prefer?</h5>
+    <select id="answer" name="two" class="form-select" aria-label="Default select example">
+        <option selected>Choose your answer.</option>
+        <option value="1">Cold and dry</option>
+        <option value="2">Extreme cold and occasional storms</option>
+        <option value="3">Extreme gas giant environment</option>
+      </select>
+
+      <h5 id="question"> What is your primary interest in space travel?</h5>
+    <select id="answer" name="three" class="form-select" aria-label="Default select example">
+        <option selected>Choose your answer.</option>
+        <option value="1">Scientific exploration and research</option>
+        <option value="2">Adventure and unique outdoor activities</option>
+        <option value="3">Unconventional space experiences</option>
+      </select>
+
+      <h5 id="question"> How important are extreme conditions and challenging environments to you?</h5>
+    <select id="answer" name="four" class="form-select" aria-label="Default select example">
+        <option selected>Choose your answer.</option>
+        <option value="1">Not important at all</option>
+        <option value="2">Exciting and intriguing</option>
+        <option value="3">Extremely important</option>
+      </select>
+
+      <h5 id="question"> What type of accommodations do you prefer?</h5>
+    <select id="answer" name="five" class="form-select" aria-label="Default select example">
+        <option selected>Choose your answer.</option>
+        <option value="1">Comfortable and familiar</option>
+        <option value="2">Unique and futuristic</option>
+        <option value="3">Limited but immersive</option>
+      </select>
+
+      <h5 id="question"> How do you feel about experiencing low or zero gravity?</h5>
+    <select id="answer" name="six" class="form-select" aria-label="Default select example">
+        <option selected>Choose your answer.</option>
+        <option value="1">Not interested</option>
+        <option value="2">Excited to try it</option>
+        <option value="3">Essential for the experience</option>
+      </select>
+
+      <h5 id="question"> What excites you the most about space exploration?</h5>
+    <select id="answer" name="seven" class="form-select" aria-label="Default select example">
+        <option selected>Choose your answer.</option>
+        <option value="1">Space history and culture</option>
+        <option value="2">Unique landscapes and moons</option>
+        <option value="3">Extreme conditions and gas giants exploration</option>
+      </select>
+     <button style="margin-top: 30px; margin-left: 700px; margin-bottom: 20px" type="submit" class="btn btn-warning">SUBMIT</button>
+    </form>
+    {% endblock %}
